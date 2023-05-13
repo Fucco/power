@@ -39,4 +39,4 @@ jobs:
           context: .
           push: true
           platforms: linux/arm/v7
-          tags: $DOCKER_REPO:latest
+          tags: ${{ vars.DOCKER_REPO }}:latest
