@@ -14,8 +14,6 @@ jobs:
   docker:
     name: Publish - Docker Hub
     runs-on: ubuntu-latest
-    env:
-      REPO: ${{ secrets.DOCKER_REPO }}
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -41,4 +39,4 @@ jobs:
           context: .
           push: true
           platforms: linux/arm/v7
-          tags: ${{ DOCKER_REPO }}:latest
+          tags: $DOCKER_REPO:latest
